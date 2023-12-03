@@ -35,3 +35,5 @@ pnpm start
 ## Reference
 
 [remix-vite-docs]: https://remix.run/docs/en/main/future/vite
+
+[Directory-Structure](https://zenn.dev/mackay/articles/70e84e04484b64)
