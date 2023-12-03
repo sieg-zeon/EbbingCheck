@@ -6,8 +6,10 @@
 
 ## Setup
 
-```shellscript
-npx create-remix@latest --template remix-run/remix/templates/unstable-vite
+```shell
+volta install pnpm
+
+pnpm i
 ```
 
 ## Run
@@ -15,14 +17,14 @@ npx create-remix@latest --template remix-run/remix/templates/unstable-vite
 Spin up the Vite dev server:
 
 ```shellscript
-npm run dev
+pnpm dev
 ```
 
 Or build your app for production and run it:
 
 ```shellscript
-npm run build
-npm run start
+pnpm build
+pnpm start
 ```
 
 [remix-vite-docs]: https://remix.run/docs/en/main/future/vite
