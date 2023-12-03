@@ -1,13 +1,12 @@
-# templates/unstable-vite
-
-⚠️ Remix support for Vite is unstable and not recommended for production.
-
-📖 See the [Remix Vite docs][remix-vite-docs] for details on supported features.
+# EbbingCheck
 
 ## Setup
 
 ```shell
+# install pnpm via Volta if you've been not installed it yet.
 volta install pnpm
+
+cp .env.default .env
 
 pnpm i
 ```
@@ -16,15 +15,23 @@ pnpm i
 
 Spin up the Vite dev server:
 
-```shellscript
+```shell
 pnpm dev
 ```
 
 Or build your app for production and run it:
 
-```shellscript
+```shell
 pnpm build
 pnpm start
 ```
+
+## Notes
+
+⚠️ Remix support for Vite is unstable and not recommended for production.
+
+📖 See the [Remix Vite docs][remix-vite-docs] for details on supported features.
+
+## Reference
 
 [remix-vite-docs]: https://remix.run/docs/en/main/future/vite
