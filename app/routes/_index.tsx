@@ -1,4 +1,5 @@
-import type { MetaFunction } from "@remix-run/node";
+import { json, type LoaderFunctionArgs, type MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -7,7 +8,15 @@ export const meta: MetaFunction = () => {
   ];
 };
 
+export const loader = async ({ request }: LoaderFunctionArgs) => {
+  return json({
+    value: process.env.FIREBASE_CLIENT_EMAIL
+  });
+};
+
 export default function Index() {
+  const { value } = useLoaderData<typeof loader>();
+
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <h1>Welcome to Remix</h1>
@@ -36,6 +45,7 @@ export default function Index() {
           </a>
         </li>
       </ul>
+      <p>{value}</p>
     </div>
   );
 }
